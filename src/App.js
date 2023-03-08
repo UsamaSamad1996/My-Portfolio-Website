@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import HeroSection from "./Components/HeroSection";
+import Layout from "./LayoutComponents/Layout";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full h-full flex justify-center items-center ">
+      <div className=" w-full max-w-[1450px] h-full bg-black ">
+        <Layout>
+          <div className="ApplicationContainer flex justify-center w-full  flex-col">
+            <HeroSection />
+            <div className="AppWrapper w-[85%] bg-black "></div>
+          </div>
+        </Layout>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
