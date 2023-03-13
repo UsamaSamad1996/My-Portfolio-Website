@@ -7,6 +7,9 @@ const Navbar = () => {
   /////////////////////////////////////////////////////////////////////
 
   const [isOpen, setIsOpen] = useState(false);
+
+  const [activeTab, setActiveTab] = useState("");
+
   const openResume = () => {
     window.open(Resume);
   };
@@ -50,13 +53,23 @@ const Navbar = () => {
       </div>
       <section className=" hidden md:flex justify-evenly items-center font-semibold capitalize text-sm tracking-wide w-full text-white ">
         <a
-          href="3"
+          href="#about"
+          onClick={() => setActiveTab("about")}
+          style={{
+            borderBottom:
+              activeTab === "about" ? "4px solid #05FDD8" : "4px solid black",
+          }}
           className="hover:text-aqua transition-all duration-200 hover:border-b-4 hover:border-aqua h-[79px] flex items-center justify-center border-b-4 border-black"
         >
           About
         </a>
         <a
-          href="3"
+          href="#work"
+          onClick={() => setActiveTab("work")}
+          style={{
+            borderBottom:
+              activeTab === "work" ? "4px solid #05FDD8" : "4px solid black",
+          }}
           className="hover:text-aqua transition-all duration-200 hover:border-b-4 hover:border-aqua h-[79px] flex items-center justify-center border-b-4 border-black"
         >
           Work

@@ -1,21 +1,22 @@
 import React from "react";
-import usama from "../Images/usama5.jpg";
+// import usama from "../Images/usama5.jpg";
 import "../LayoutComponents/style.css";
-import video from "../Images/video2.mp4";
+import Particle from "./Particle";
+// import video from "../Images/video2.mp4";
 
 const HeroSection = () => {
-  // bg-[#4D515A]
-  //border-t-[1px] border-grey
-  //border-r-[1px] border-grey
   return (
     <div
       id="about"
-      className="ComponentContainer w-full  flex justify-center items-center  relative  h-[600px]  "
+      className="ComponentContainer w-full  flex justify-center items-center  relative  h-[600px] z-0 bg-black "
     >
-      <video className=" h-[600px] w-full object-cover" autoPlay loop muted>
+      {/* <video className=" h-[600px] w-full object-cover z-0" autoPlay loop muted>
         <source src={video} type="video/mp4" />
-      </video>
-      <div className="socialMediaLinks h-[600px] w-[5rem] bg-black absolute left-0 top-0 z-10 pt-20 ">
+      </video> */}
+
+      <Particle />
+
+      <div className="socialMediaLinks h-full w-[5rem] bg-black absolute left-0 top-0 z-10 pt-20 border-r-[1px] border-grey ">
         <a href="https://www.linkedin.com/in/usama-abdul-samad-23293a1bb/">
           <div className="linkedin w-full flex justify-center items-center h-16 hover:bg-slate-900">
             <svg
@@ -160,8 +161,8 @@ const HeroSection = () => {
           </div>
         </a>
       </div>
-      <div className="Wrapper w-full h-full  text-white font-libra  flex items-start  justify-between  py-16 px-36 absolute  bg-slate-900 bg-opacity-60  ">
-        <div className="first w-[60%] pt-5 ">
+      <div className="Wrapper w-full h-full  text-white font-libra  flex items-start  justify-between  py-16 px-36 absolute bg-slate-900 bg-opacity-0 border-t-[1px] border-grey">
+        <div className="first w-[60%] pt-5">
           <h1 className="text-7xl font-extrabold pb-4">Hi!</h1>
           <h2 className="text-7xl font-extrabold pb-4">
             I'm <span>Usama</span>,
@@ -171,11 +172,11 @@ const HeroSection = () => {
             UX/UI Designer and Front-end Developer{" "}
             <span className=" ">ReactJS</span> Based in Karachi, Pakistan.
           </p>
-          <button className="rounded-lg px-8 py-3  font-libra text-aqua bg-black mt-5 text-xl">
+          <button className=" card rounded-lg px-8 py-3  font-libra text-aqua bg-black mt-5 text-xl border-2 border-aqua ml-1 ">
             Projects
           </button>
         </div>
-        <div className="w-[35%] flex items-center justify-center flex-col rounded-xl">
+        {/* <div className="w-[35%] flex items-center justify-center flex-col rounded-xl">
           <img
             src={usama}
             alt="Usama"
@@ -184,7 +185,7 @@ const HeroSection = () => {
           <h1 className="card text-aqua py-6 px-3  w-full rounded-b-xl font-semibold text-lg tracking-wide font-libra  ">
             Frontend Web Developer ReactJS
           </h1>
-        </div>
+        </div> */}
       </div>
     </div>
   );
